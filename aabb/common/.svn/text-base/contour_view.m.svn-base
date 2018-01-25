@@ -1,0 +1,131 @@
+% tranform this into a "drawing routine" with status variables
+% each interface change causes a re-draw of the scene like in glut 
+% applications
+function h_out = contour_view( C )
+
+% setup
+h = gca;
+hold on;
+ 
+set( h,'Position',[0 0.05 1 1-0.05 ] );
+% do not give output if not requested
+if nargout == 0
+    h_out = [];
+else
+    h_out = h;
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%% menu setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+menu_view = uimenu('Label','View');
+    uimenu( menu_view,'Label','View Normals','Callback',@view_normals_callback);
+    uimenu( menu_view,'Label','View Indexes','Callback',@view_indexes_callback);
+    uimenu( menu_view,'Label','View Samples','Callback',@view_samples_callback);
+    
+menu_tools = uimenu('Label','Tools');
+    uimenu( menu_tools,'Label','Pick Point', 'Callback', @point_pick_callback);
+    uimenu( menu_tools,'Label','Snapshot', 'Callback', @snapshot_callback);
+
+  
+% save status variables
+h_curves  = draw_curves();   setappdata(h,'h_curves',h_curves);
+h_samples = draw_samples();  setappdata(h,'h_samples',h_samples);
+h_normals = draw_normals();  setappdata(h,'h_normals',h_normals);
+h_indexes = draw_indexes();  setappdata(h,'h_indexes',h_indexes);
+
+% set drawing limits and vis setup
+xlim([min(C.vertices(:,1)),max(C.vertices(:,1))]);
+ylim([min(C.vertices(:,2)),max(C.vertices(:,2))]);
+axis equal
+axis off
+
+%%%%%%%%%%%%%%%%%%%%%%%% MENU CALLBACKS %%%%%%%%%%%%%%%%%%%%%%%%
+function view_normals_callback( IGNORE1, IGNORE2 ) %#ok<INUSD>
+    if strcmp( get( h_normals, 'Visible' ), 'on' );
+        set( h_normals, 'Visible', 'off' )
+    else
+        set( h_normals, 'Visible', 'on' )
+    end
+end
+
+function view_indexes_callback( IGNORE1, IGNORE2 ) %#ok<INUSD>
+    if strcmp( get( h_indexes, 'Visible' ), 'on' );
+        set( h_indexes, 'Visible', 'off' )
+    else
+        set( h_indexes, 'Visible', 'on' )
+    end
+end
+
+function view_samples_callback( IGNORE1, IGNORE2 ) %#ok<INUSD>
+    if strcmp( get( h_samples, 'Visible' ), 'on')
+        set( h_samples, 'Visible', 'off' )
+    else
+        set( h_samples, 'Visible', 'on' )
+    end
+end
+
+function point_pick_callback( IGNORE1, IGNORE2 ) %#ok<INUSD>
+    current_point = get( get(h,'parent'),'currentpoint' );
+    disp( current_point );
+end
+
+function snapshot_callback( IGNORE1, IGNORE2 ) %#ok<INUSD>
+    outfilename = sprintf('results/snapshot_%s_%s', datestr(now,'ddmmyy'), datestr(now,'HHMMss') );
+    print('-dpng', outfilename);
+end
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DRAWING CALLBACKS %%%%%%%%%%%%%%%
+function h_curves = draw_curves()
+    % for every curve
+    h_curves = [];
+    for i=1:length(C)
+        if isfield(C(i),'isOpen') && C(i).isOpen
+            h_curves(end+1) = line(C(i).vertices(:,1), C(i).vertices(:,2)); %#ok<AGROW>
+        else
+            h_curves(end+1) = line([C.vertices(:,1); C.vertices(1,1)],...
+                                   [C.vertices(:,2); C.vertices(1,2)] ); %#ok<AGROW>
+        end
+    end 
+end
+
+function h_samples = draw_samples()
+    h_samples = zeros( length(C), 1 );
+    for i=1:length(C)
+        h_samples(i) = scatter( C(i).vertices(:,1), C(i).vertices(:,2), '.r', 'LineWidth', .1 ); %#ok<AGROW>
+    end
+    set( h_samples, 'Visible', 'off' );
+end
+
+function h_normals = draw_normals()   
+    h_normals = [];
+    for i=1:length(C)
+        if ~isfield( C(i), 'VN' );
+            h_normals = [];
+            return
+        end
+        
+        for j=1:size( C(i).vertices )
+            h_normals(end+1) = myline2( C(i).vertices(j,:), C(i).VN(j,:), .1); %#ok<AGROW>
+            set( h_normals(end), 'linewidth', 0.5 );
+            set( h_normals(end), 'color', 'green' );
+        end
+    end
+    set( h_normals, 'Visible', 'off' );
+end
+
+function h_indexes = draw_indexes()
+    h_indexes = zeros( length(C), 1 );
+    if length(C) == 1
+        for j=1:size(C(1).vertices)
+            h_indexes(end+1) = text( C(1).vertices(j,1), C(1).vertices(j,2), sprintf(' %d',j) ); %#ok<AGROW>
+        end
+    else
+        for i=1:length(C)
+            for j=1:size(C(i).vertices)
+                h_indexes(end+1) = text( C(i).vertices(j,1), C(i).vertices(j,2), sprintf(' %d_{%d}',j,i) ); %#ok<AGROW>
+            end
+        end        
+    end
+    set( h_indexes, 'Visible', 'off' )
+end
+
+end % END OF CURVELAB

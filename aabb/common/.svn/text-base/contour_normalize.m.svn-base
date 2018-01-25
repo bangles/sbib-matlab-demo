@@ -1,0 +1,17 @@
+function varargout  = curve_normalize( C )
+   
+% compress the vertices of all curves in a single structure
+% and compute range data (note [] are ESSENTIAL)
+mn = min( vertcat(C.vertices) );
+mx = max( vertcat(C.vertices) );
+range = max(mx - mn);
+half_range = range/2;
+cnst = (mx - mn)/2;
+
+for i=1:length(C)
+    verts = zeros( size(C(i).vertices) );
+    for vIdx = 1:size(C(i).vertices)
+        verts(vIdx,:) = (C(i).vertices(vIdx, :) - mn - cnst)/half_range;
+    end
+    varargout{i} = verts;
+end

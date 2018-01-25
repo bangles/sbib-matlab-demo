@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Editor version="1.0">
+   <File absPath="/Users/ata2/svn/meshlab/myutil" lastWrittenTime="1221172643594" name="meshlab.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/meshlab" lastWrittenTime="1221847149476" name="example_update_symmetry_loci.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/meshlab" lastWrittenTime="1221847150470" name="update_symmetry_loci.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/meshlab" lastWrittenTime="1221847151230" name="main.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/meshlab/myutil" lastWrittenTime="1221847152006" name="compute_symmetrynormal.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/myutil" lastWrittenTime="1221847394494" name="curve_compute_normals.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/myutil" lastWrittenTime="1221851468754" name="myline.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/myutil" lastWrittenTime="1221852651430" name="mypoint.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/OLD" lastWrittenTime="1221860127832" name="symb_closest_proj.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/examples" lastWrittenTime="1221861113700" name="example_closest_projection_point.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab" lastWrittenTime="1221861114144" name="example_closest_projection_point_2.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab/myutil" lastWrittenTime="1221861114511" name="closest_projection_point.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab" lastWrittenTime="1221861114930" name="example_voting.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/curvelab" lastWrittenTime="1221861115400" name="example_voting_2.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/pointlab" lastWrittenTime="1221868667817" name="example_load.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/svn/pointlab" lastWrittenTime="1221868667830" name="pcloud_read_ply.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_meshlab" lastWrittenTime="1222451121056" name="pathdef.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222453649933" name="pcloud_read_off.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/common" lastWrittenTime="1222453984299" name="txtwaitbar.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/common" lastWrittenTime="1222453989695" name="txtwaitbar_demo.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222454005113" name="pcloud_normal_estimate.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222454220967" name="pcloud_read_ply.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/trilab" lastWrittenTime="1222454285572" name="mesh_read_off.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222455297661" name="create_wooddoll_matdata.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222457069006" name="example_voting.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222463209855" name="pathdef.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222463612438" name="test.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222463698318" name="dot_product.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222463728367" name="dot_product_demo.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222466424591" name="bbox_axis_aligned.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222466502155" name="mesh_aligned_bbox.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222466516556" name="myline.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/common" lastWrittenTime="1222707352882" name="dot_product.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222713052562" name="scalar_product.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222719609817" name="bbox_axis_aligned.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222721466693" name="L2_difference.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222723110039" name="project_on_plane.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/common" lastWrittenTime="1222723483604" name="defaultvalue.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222724658875" name="create_orthonormal_frame.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222725451451" name="generate_rosa_data.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222733527904" name="mypoint.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222740270329" name="test_linear_sampling.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222740472506" name="example_voting_2.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222740473002" name="example_voting_3.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/pointlab" lastWrittenTime="1222740715965" name="closest_projection_point.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222810674331" name="compute_cut_centroids.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222813629709" name="rosa_pcloud_demo.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/workspace_pointlab" lastWrittenTime="1222813631380" name="rosa_update.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2" lastWrittenTime="1242866726519" name="test.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/Users/ata2/workspace/matlibs/common" lastWrittenTime="1257305346533" name="curve_read_cg.m">
+      <CodeFolds version="1.0"/>
+   </File>
+</Editor>
