@@ -1,5 +1,14 @@
 # sbib-matlab-demo
 
-Run Demo.m in MATLAB
+In MATLAB:
+1. Run `compile_all.m`
+2. Run `Demo.m`
 
-Works on Linux and MacOS. You might have to use MATLAB's mex to recompile genOP.cpp as well as aabb/@PatchSearcher.
+### Requirements
+
+- libboost-system-dev
+- libboost-thread-dev
+- libcgal-dev
+
+
+
