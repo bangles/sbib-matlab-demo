@@ -3,7 +3,7 @@ function [V, T, vi, Pch] = Demo_Fitting(samples)
     addpath('aabb');
     res = 40;
     iter = 0;
-    regIter = 50;
+    regIter = 20;
     finIter = 0;
     symmetry = true;
     fullcontact = false;
@@ -795,6 +795,7 @@ function doRun(~,~)
 		
 		showResults();
         drawnow;
+        
 		%saveas(gcf, strcat(int2str(i), '.png'));
     end
     
